@@ -23,13 +23,13 @@ public:
 	Vec3& operator*=(const float t);
 	Vec3& operator/=(const float t);
 
-	Vec3 operator+(const Vec3& v2);
-	Vec3 operator-(const Vec3& v2);
-	Vec3 operator*(const Vec3& v2);
-	Vec3 operator/(const Vec3& v2);
+	Vec3 operator+(const Vec3& v2) const;
+	Vec3 operator-(const Vec3& v2) const;
+	Vec3 operator*(const Vec3& v2) const;
+	Vec3 operator/(const Vec3& v2) const;
 
-	Vec3 operator*(const float t);
-	Vec3 operator/(const float t);
+	Vec3 operator*(const float t) const;
+	Vec3 operator/(const float t) const;
 
 	float length() const;
 	float squared_length() const;
@@ -54,4 +54,14 @@ inline Vec3 cross(const Vec3& v1, const Vec3& v2)
 inline Vec3 normalize(Vec3 v1)
 {
 	return v1 / v1.length();
+}
+
+inline Vec3 operator*(const float t, const Vec3& v)
+{
+	return Vec3(v * t);
+}
+
+inline Vec3 operator/(const float t, const Vec3& v)
+{
+	return Vec3(v / t);
 }

@@ -95,7 +95,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return *this;
 }
 
- Vec3 Vec3::operator+(const Vec3& v2)
+ Vec3 Vec3::operator+(const Vec3& v2) const
 {
 	Vec3 output;
 	output.x = x + v2.x;
@@ -105,7 +105,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return output;
 }
 
- Vec3 Vec3::operator-(const Vec3& v2)
+ Vec3 Vec3::operator-(const Vec3& v2) const
 {
 	Vec3 output;
 	output.x = x - v2.x;
@@ -115,7 +115,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return output;
 }
 
- Vec3 Vec3::operator*(const Vec3& v2)
+ Vec3 Vec3::operator*(const Vec3& v2) const
 {
 	Vec3 output;
 	output.x = x * v2.x;
@@ -125,7 +125,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return output;
 }
 
- Vec3 Vec3::operator/(const Vec3& v2)
+ Vec3 Vec3::operator/(const Vec3& v2) const
 {
 	Vec3 output;
 	output.x = x / v2.x;
@@ -135,7 +135,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return output;
 }
 
- Vec3 Vec3::operator*(const float t)
+ Vec3 Vec3::operator*(const float t) const
 {
 	Vec3 output;
 	output.x = x * t;
@@ -145,7 +145,7 @@ Vec3::Vec3(float xin, float yin, float zin)
 	return output;
 }
 
- Vec3 Vec3::operator/(const float t)
+ Vec3 Vec3::operator/(const float t) const
 {
 	Vec3 output;
 	output.x = x / t;
